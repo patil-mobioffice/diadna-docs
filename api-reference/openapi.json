@@ -251,7 +251,7 @@
                 "id": { "type": "string" },
                 "type": {
                   "type": "string",
-                  "enum": ["POLISH-POLISH", "POLISH", "ROUGH", "POLISH-ROUGH"]
+                  "enum": ["POLISH-SPLIT", "ROUGH-ROUGH", "POLISH-ROUGH", "POLISH-POLISH", "SPLIT-ROUGH", "SPLIT-SPLIT"]
                 }
               },
               "required": ["id", "type"]

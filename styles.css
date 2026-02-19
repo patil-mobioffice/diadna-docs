@@ -1,0 +1,32 @@
+/* Closed select */
+.dark .text-playground-input {
+  background-color: #000 !important;   /* panel bg */
+  border: 1px solid #1f2937 !important;   /* subtle border */
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #e5e7eb !important;
+  appearance: none;
+}
+
+/* Hover state */
+.dark .text-playground-input:hover {
+  border-color: #22c55e !important; /* green accent */
+}
+
+/* Focus state */
+.dark .text-playground-input:focus {
+  outline: none;
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 1px #22c55e;
+}
+
+/* Dropdown options */
+.dark .text-playground-input option {
+  background-color: #0000;
+  color: #e5e7eb;
+}
+
+/* Selected option color (in dropdown list) */
+.dark .text-playground-input option:checked {
+  color: #22c55e;
+}
