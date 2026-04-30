@@ -224,6 +224,40 @@
           }
         }
       }
+    },
+    "/diamond/register-report-id": {
+      "post": {
+        "summary": "Register Report ID",
+        "description": "Registers a report ID with lab details and stone ID.",
+        "security": [
+          {
+            "BearerAuth": [],
+            "SecretKeyAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterReportIdRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Report ID registered successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegisterReportIdResponse"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -477,6 +511,49 @@
           "message": {
             "type": "string",
             "example": "Main files submitted successfully."
+          }
+        },
+        "required": ["success", "message"]
+      },
+      "RegisterReportIdRequest": {
+        "type": "object",
+        "properties": {
+          "queryId": {
+            "type": "string",
+            "description": "Optional query ID"
+          },
+          "labName": {
+            "type": "string",
+            "enum": ["TRACR", "GIA", "IGI", "HRD", "Company"],
+            "description": "Name of the lab"
+          },
+          "labNumber": {
+            "type": "string",
+            "description": "Lab number"
+          },
+          "stoneId": {
+            "type": "string",
+            "description": "Stone ID"
+          }
+        },
+        "required": ["labName", "labNumber", "stoneId"],
+        "example": {
+          "queryId": "842738",
+          "labName": "GIA",
+          "labNumber": "1546584659DDA",
+          "stoneId": "KP8ABX947-004.5"
+        }
+      },
+      "RegisterReportIdResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "message": {
+            "type": "string",
+            "example": "Report ID uploaded successfully"
           }
         },
         "required": ["success", "message"]

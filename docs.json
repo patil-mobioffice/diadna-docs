@@ -34,7 +34,8 @@
               "api-reference/endpoint/getMainFilesByStoneId",
               "api-reference/endpoint/getFilesByQueryId",
               "api-reference/endpoint/addQueryIdsToQueryGroup",
-              "api-reference/endpoint/submitMainFiles"
+              "api-reference/endpoint/submitMainFiles",
+              "api-reference/endpoint/registerReportId"
             ]
           }
         ]
